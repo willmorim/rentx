@@ -41,10 +41,14 @@ import {
 } from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
+type NavigationProps = {
+  navigate: (screen: string) => void;
+};
+
 export function SchedulingDetails() {
   const theme = useTheme();
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProps>();
 
   function handleConfirmRental() {
     navigation.navigate("SchedulingComplete");

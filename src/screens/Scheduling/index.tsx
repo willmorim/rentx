@@ -20,9 +20,13 @@ import {
   Footer,
 } from "./styles";
 
+type NavigationProps = {
+  navigate: (screen: string) => void;
+};
+
 export function Scheduling() {
   const theme = useTheme();
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProps>();
 
   function handleConfirmRental() {
     navigation.navigate("SchedulingDetails");

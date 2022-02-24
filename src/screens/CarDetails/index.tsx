@@ -29,8 +29,12 @@ import {
   Footer,
 } from "./styles";
 
+type NavigationProps = {
+  navigate: (screen: string) => void;
+};
+
 export function CarDetails() {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProps>();
 
   function handleConfirm() {
     navigation.navigate("Scheduling");

@@ -7,10 +7,14 @@ import { Container, Content, Title, Message, Footer } from "./styles";
 import { ConfirmButton } from "../../components/ConfirmButton";
 import { useNavigation } from "@react-navigation/native";
 
+type NavigationProps = {
+  navigate: (screen: string) => void;
+};
+
 export function SchedulingComplete() {
   const { width } = useWindowDimensions();
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProps>();
 
   function handleConfirm() {
     navigation.navigate("Home");

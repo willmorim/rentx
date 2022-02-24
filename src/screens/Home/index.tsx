@@ -7,8 +7,12 @@ import { Car } from "../../components/Car";
 
 import { Container, Header, TotalCars, HeaderContent, CarList } from "./styles";
 
+type NavigationProps = {
+  navigate: (screen: string) => void;
+};
+
 export function Home() {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProps>();
 
   const carData = {
     brand: "Audi",
