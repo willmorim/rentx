@@ -5,14 +5,8 @@ import { Button } from "../../components/Button";
 
 import { useNavigation, useRoute } from "@react-navigation/native";
 
-import speedSvg from "../../assets/speed.svg";
-import accelerationSvg from "../../assets/acceleration.svg";
-import forceSvg from "../../assets/force.svg";
-import gasolineSvg from "../../assets/gasoline.svg";
-import exchangeSvg from "../../assets/exchange.svg";
-import peopleSvg from "../../assets/people.svg";
-
 import { CarDTO } from "../../dtos/CarDTO";
+import { getAccessoryIcon } from "../../utils/getAccessoryIcon";
 
 import {
   Container,
@@ -80,7 +74,7 @@ export function CarDetails() {
           {car.accessories.map((accessory) => (
             <Accessory
               key={accessory.type}
-              icon={speedSvg}
+              icon={getAccessoryIcon(accessory.type)}
               name={accessory.name}
             />
           ))}
