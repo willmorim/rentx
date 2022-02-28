@@ -13,7 +13,7 @@ import {
 } from "@expo-google-fonts/archivo";
 
 import { Routes } from "./src/routes";
-import theme from "./src/screens/styles/theme";
+import theme from "./src/styles/theme";
 
 export default function App() {
   const [fontsLoaded] = useFonts({

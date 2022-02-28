@@ -84,7 +84,7 @@ export function CarDetails() {
       </Content>
 
       <Footer>
-        <Button title="Escolher o periodo do aluguel" onPress={handleConfirm} />
+        <Button title="Escolher o período do aluguel" onPress={handleConfirm} />
       </Footer>
     </Container>
   );
