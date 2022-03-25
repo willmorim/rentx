@@ -76,6 +76,8 @@ export function SchedulingDetails() {
       ...dates,
     ];
 
+    // api.post("schedules_byuser");
+
     api
       .put(`/schedules_bycars/${car.id}`, {
         id: car.id,
